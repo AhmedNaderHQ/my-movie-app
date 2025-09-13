@@ -1,0 +1,37 @@
+/* Navbar visual enhancements */
+/* Use theme-aware backgrounds for the translucent navbar */
+[data-bs-theme="dark"] .navbar-blur{ background-color: rgba(33,37,41,.85)!important; border-bottom: 1px solid rgba(255,255,255,.06); }
+[data-bs-theme="light"] .navbar-blur{ background-color: rgba(255,255,255,.85)!important; border-bottom: 1px solid rgba(0,0,0,.06); }
+.navbar-blur{ backdrop-filter: saturate(180%) blur(8px); }
+
+:root{
+  --brand-primary:#0d6efd;
+  --brand-dark:#0b1220;
+}
+
+.card.card-zoom{
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card.card-zoom:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+.poster-wrap{ position: relative; overflow: hidden; }
+.rating-badge{
+  position:absolute; top:.5rem; left:.5rem;
+  background:rgba(0,0,0,.7); color:#fff; padding:.15rem .45rem;
+  border-radius:.375rem; font-weight:600; font-size:.85rem;
+}
+.h-scroll{ display:flex; gap:1rem; overflow-x:auto; padding-bottom:.5rem; }
+.h-scroll::-webkit-scrollbar{ height:8px; }
+.h-scroll::-webkit-scrollbar-thumb{ background:#c7c7c7; border-radius:4px; }
+
+/* Bootstrap placeholders tweak */
+.placeholder-card .card-img-top{ height:350px; background-color:#e9ecef; }
+
+
+
+/* Footer styles */
+.site-footer{ border-top:1px solid var(--bs-border-color); background-color: var(--bs-body-bg); color: var(--bs-body-color); }
+.site-footer a{ color: var(--bs-secondary-color); text-decoration:none; }
+.site-footer a:hover{ color: var(--bs-link-hover-color); text-decoration:underline; }
